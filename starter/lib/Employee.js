@@ -1,14 +1,14 @@
 class Employee {
-    constructor(employeeName, employeeID, email) {
-      this.employeeName = employeeName;
-      this.employeeID = employeeID;
+    constructor(name, id, email) {
+      this.name = name;
+      this.id = id;
       this.email = email;
     }
     getName() {
-        return this.employeeName;
+        return this.name;
     }
     getId() {
-        return this.employeeID;
+        return this.id;
     }
     getEmail() {
         return this.email;

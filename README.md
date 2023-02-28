@@ -5,8 +5,8 @@
 This is a working Node.js command-line application that will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. This application will help team managers assign and crea their team easily. This application is test driven which means that the tests were created first to make the classes for the javascripts file. 
 
 ## Table of Contents 
-  * [Installation](#installation)
   * [Technologies](#technologies)
+  * [Installation](#installation)
   * [Screenshot of Sample File](#screenshot)
   * [Usage](#usage)
   * [License](#license)

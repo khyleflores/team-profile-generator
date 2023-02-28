@@ -21,21 +21,25 @@ function promptManager () {
       type: 'input',
       name: 'name',
       message: 'Please enter your name.',
+      validate: isNotEmpty
     },
     {
       type: 'input',
       name: 'employeeID',
       message: 'Please enter your employee ID.',
+      validate: isNotEmpty
     },
     {
       type: 'input',
       name: 'emailAddress',
       message: 'Please enter your email address.',
+      validate: isEmailAddress
     },
     {
       type: 'input',
       name: 'officeNumber',
       message: 'Please enter your office number.',
+      validate: isNotEmpty
     },
     {
       type: 'confirm',
@@ -100,21 +104,25 @@ const addEngineer = async () => {
         type: 'input',
         name: 'name',
         message: 'Please enter the name of the Engineer.',
+        validate: isNotEmpty
       },
       {
         type: 'input',
         name: 'employeeID',
         message: 'Please enter the id of the Engineer.',
+        validate: isNotEmpty
       },
       {
         type: 'input',
         name: 'emailAddress',
         message: 'Please enter the email address of the Engineer.',
+        validate: isEmailAddress
       },
       {
         type: 'input',
         name: 'githubUsername',
         message: 'Please enter the github username of the Engineer.',
+        validate: isNotEmpty
       }
       ]).then(answers => {
           // Create new engineer object from the prompts
@@ -135,21 +143,25 @@ const addEngineer = async () => {
         type: 'input',
         name: 'name',
         message: 'Please enter the name of the Intern.',
+        validate: isNotEmpty
       },
       {
         type: 'input',
         name: 'employeeID',
         message: 'Please enter the id of the Intern.',
+        validate: isNotEmpty
       },
       {
         type: 'input',
         name: 'emailAddress',
         message: 'Please enter the email address of the Intern.',
+        validate: isEmailAddress
       },
       {
         type: 'input',
         name: 'school',
         message: 'Please enter the school of the Intern.',
+        validate: isNotEmpty
       }
       ]).then(answers => {
         // Create new intern object from the prompts
@@ -186,6 +198,23 @@ function renderHTML (){
   } catch (error) {
     console.log(error);
   }
+};
+
+// function for checking if prompt is empty
+const isNotEmpty = async (input) => {
+  if(!input) {
+    return "Please answer the prompt."
+  }
+  return true
+};
+
+// function for checking if prompt has an email address structure
+const isEmailAddress = async (email) => {
+    valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+    if (!valid) {
+        return "Please enter a valid email.";
+    } 
+    return true;
 };
 
 // function call to initialize program

@@ -29,13 +29,16 @@ Below is a sample screenshot of the rendered HTML page of the application.
 
 Once software is downloaded and Node packages are initialised, you will now be able to access the application. Use the command "node index.js" within the directory of this project to initialise the prompts.
 As the manager, you will be asked to enter your details in the prompt.
+
  ![Manager Prompt screenshot](/assets/screenshot-1.png)
 
 Once you have entered your details, you will be asked if you want to add a team member.
 You can either add an Engineer or an Intern.
+
  ![Add a team member screenshot](/assets/screenshot-2.png)
 
 When the team is complete, select the Team Completed in the options. This will logged it as successful and will render the HTML.
+
  ![Team complete screenshot](/assets/screenshot-3.png)
 
 ## License
